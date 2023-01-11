@@ -1,0 +1,137 @@
+.table{
+    font-size: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+  tr, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  /* tr:nth-child(even) {
+    background-color: #dddddd;
+  } */
+
+  .inner {
+    padding: 5px 30px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mail_dropdown{
+    margin-top: 20px;
+    margin-left: 30px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 30px;
+  }
+  
+  .mail_dropdown:hover{
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #0048ba;
+    color: white;
+  }
+
+  .active{
+    background-color: #089708;
+    color: white;
+    transition: width 1s, transform 2s;
+  }
+  
+  .deactive{
+    background-color: red;
+    color: white;
+    transition: width 1s, transform 2s;
+  }
+  
+  .toggle_btn_group button{
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .mails_tab .tabs {  
+    display: flex;  
+  }
+  .mails_tab .tab {  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: lightsteelblue; 
+    padding: 2em 0;  
+    border: none;
+  }
+  .mails_tab .tab:not(:last-child) {
+    border-right: 1px solid steelblue;  
+  }
+  .mails_tab .tab.active {
+    background: steelblue;
+    font-weight: bold;
+  }
+  .panel {
+    display: none;
+    background-color: #eaeaea;
+    padding: 10px;
+  }
+
+  .panel.active {
+    display: block;
+  }
+  
+ 
+  .mail_btn:active{
+    background: lightgray;
+    color: white;
+  }
+  
+  .mail_btn:focus{
+    background: gray;
+    color: white;
+  }
+
+  .mail_input{
+    border: none;
+    padding: 5px;
+    padding-left: 3px;
+  }
+  
+  .mail_btn{
+    border: none;
+    padding: 5px;
+    padding: 0px 5px;
+  }
+
+  .select_button{
+    border: none;
+    font-size: 15px;
+    background-color: white;
+    padding: 9px 20px;
+    width: 100%;
+  }
+
+  .select_button:focus{
+    background: gray;
+    color: white;
+  }
+
+  .user_table{
+    font-size: 15px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .user_table td{
+    padding: 5px;
+  }
+
+  td{
+    border: 1px solid #dddddd;
+  }

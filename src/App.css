@@ -1,0 +1,481 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main_dash{
+  display: flex;
+}
+
+.dashboard_header{
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 50px;
+}
+
+.side_bar{
+  width: 15%;
+  transition: 0.5s;
+}
+
+.mv-sidebar{
+  width: 0%;
+  transition: 0.5s;
+}
+
+.data_description{
+  width: 100%;
+}
+
+.data_header{
+  background-color: #e4e4e4;
+  height: 110px;
+}
+
+.data_body{
+  background-color: rgb(248, 248, 248);
+  height: 900px;
+}
+
+.sidebar_Links{
+  text-decoration: none;
+  cursor: pointer;
+  width: 90%;
+  font-size: 17px;
+  font-weight: 500;
+  border: 1px solid gainsboro;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.sidebar_Links a{
+  color: black;
+}
+
+.bar_links{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.bar_links p{
+  margin-bottom: 0px;
+}
+
+.sidebar_Links:hover{
+  background-color: #e4e4e4;
+  color: black;
+}
+
+.dashboard_logo{
+  height: 50px;
+  width: auto;
+}
+
+.dashboard_icons{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Admin_info{
+  height: 50px;
+}
+
+.bar_links.active{
+  background-color: #0048ba;
+  border: none;
+  color: white;
+}
+
+.Admin_info p{
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.admin_data{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Active_status{
+  font-size: 10px;
+  color: #089708;
+}
+
+
+/* table style  */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  height: 5px;
+  width: 100%;
+}
+
+th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+.selected_user{
+  padding: 5px;
+}
+
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+.ip_data_list{
+  padding: 5px;
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.ip_data_list2{
+  display: flex;
+}
+
+.ip_data_lists table{
+  width: 50%;
+  font-size: 8px;
+}
+
+.ip_data_list p{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.role_data{
+  text-align: center;
+}
+
+.role_data p{
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.role_data span{
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.ip_data_list div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ip_data{
+  font-size: 12px;
+}
+
+.ip_data-btn{
+  font-size: 10px;
+  width: 90px;
+}
+
+.ip_tracker{
+  border-radius: 5px;
+  padding: 8px;
+  margin: 15px;
+  border: 1px solid gainsboro;
+}
+
+.hide_content{
+  display: none;
+}
+
+.toggle_btn{
+  position: absolute;
+  top: 50%;
+  margin-left: -12px;
+}
+
+.toggle_btn {
+  padding: 10px 10px;
+  color: black;
+  line-height: 0px;
+  cursor: pointer;
+  background-color: #e4e4e4;
+  border-radius: 50%;
+}
+
+/* toggle btn  */
+.toggoler{
+  line-height: 0px !important;
+}
+
+
+
+
+
+/* modal style imported  */
+
+.darkBG {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.centered {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.w3-animate-opacity {
+  animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+.modal {
+  width: 850px;
+  height: 300px;
+  background: white;
+  color: white;
+  z-index: 10;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.modalHeader {
+  height: 50px;
+  background: white;
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.heading {
+  margin: 0;
+  padding: 10px;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+
+.modalContent {
+  padding: 10px 30px 40px 30px;
+  font-size: 14px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.modalActions {
+  position: absolute;
+  bottom: 2px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.actionsContainer {
+  text-align: end;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
+
+.closeBtn {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 5px 8px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  color: #ffff;
+  background: #0048ba;
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+  position: absolute;
+  right: 0;
+  top: 0;
+  align-self: flex-end;
+}
+
+.closeBtn:hover {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.PublishBtn {
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 11px 28px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: none;
+  color: #fff;
+  background: #0048ba;
+}
+
+.PublishBtn:hover {
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6);
+  color: black;
+  background: rgba(0, 0, 0, 0);
+}
+
+.cancelBtn {
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 11px 28px;
+  border-radius: 12px;
+  margin-right: 10px;
+  font-size: 0.8rem;
+  border: none;
+  color: #2c3e50;
+  background: #ebe9e9;
+  transition: all 0.25s ease;
+}
+
+.cancelBtn:hover {
+  box-shadow: none;
+  transform: none;
+  background: whitesmoke;
+}
+
+.Settings_dropbtn {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.Settings_dropdown {
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.Settings_dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  left: 80px;
+  box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.Settings_dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.Settings_dropdown-content a:hover {background-color: #ddd;}
+
+.Settings_dropdown .Settings_dropdown-content {display: block;}
+
+.settings_Close{
+  display: none;
+}
+
+/* tabs design for notice page  */
+
+.notice_header{
+  background-color: #e4e4e4;
+  height: 80px;
+}
+
+.notice_inner{
+  padding: 10px;
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+
+.notice_navigation{
+  text-align: start;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.notice_header_btn{
+  border: none;
+  padding: 8px 12px;
+  font-size: 17px;
+  margin-right: 5px;
+  display: flex;
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.notice_header_btn p{
+  margin-left: 5px;
+}
+
+.notice_header_btn:hover{
+  background-color: #0048ba;
+  color: #fff;
+}
+
+.notice_select{
+  height: 35px;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+ 
+}
+
+.notice_select option p {
+  background-color: gainsboro !important;
+  font-size: 20px;
+}
+
+/* mail tabs design  */
+
+.mails_tab .tabs {  
+  display: flex;  
+  padding: 10px;
+}
+.mails_tab .tab {  
+  background: white;
+  border-radius: 5px;
+  margin: 5px 30px; 
+  padding: .7em 2em;  
+  border: none;
+}
+
+.mails_tab button {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.mails_tab .tab.active {
+  background: #0048ba;
+  font-weight: bold;
+  color: white;
+}
+.panel {
+  display: none;
+  padding: 10px;
+}
+.panel.active {
+  display: block;
+}
