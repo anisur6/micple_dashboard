@@ -457,7 +457,7 @@ th {
 .mails_tab .tab {  
   background: white;
   border-radius: 5px;
-  margin: 5px 30px; 
+  margin: 5px 29px; 
   padding: .7em 2em;  
   border: none;
 }
@@ -480,7 +480,17 @@ th {
   display: block;
 }
 
-.select_button{
-  background: gray;
-  color: white;
+@media(max-width: 1440px){
+  .side_bar {
+    width: 20%;
+  }
+
+}
+
+
+@media(max-width: 1024px){
+  .side_bar {
+    width: 25%;
+  }
+
 }

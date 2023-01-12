@@ -64,6 +64,7 @@ const AllMails = () => {
 
 
    
+    // find out userId from Country selection 
     let userCollection = [];
 
     data.map((item) => {
@@ -76,38 +77,41 @@ const AllMails = () => {
             } else {
               userCollection[index]["count"] += 1;
             }
-  
      }, [])
 
 
 
+
+     
+ 
     return (
         <>
 
 
                 <div className={notice_table.inner}>
           
-                    <table className={notice_table.table} style={{width: '5%'}}>
+                    <table className={notice_table.table} style={{width: '15%'}}>
                         <tr>
                             <th style={{padding: '8px'}}>Country</th>
                         </tr>
 
-                        <tr>
+                
                         {
+                           
                             userCollection.map((contendor) => {
                                 return(
                                     <>
                                      <tr onClick={() => handleCountry(contendor.country)}>
-                                        <button className={notice_table.select_button} >{contendor.country} {contendor.count}</button>
+                                        <button className={notice_table.select_button} >{contendor.country} ({contendor.count})</button>
                                      </tr>
                                     </>
                                 )
                             })
                         }
-                        </tr> 
+                    
                     </table>
 
-                    <table className={notice_table.table} style={{width: '10%'}}>
+                    <table className={notice_table.table} style={{width: '12%'}}>
                                 <tr>
                                     <th style={{padding: '8px'}}>State</th>
                                 </tr>
@@ -129,7 +133,7 @@ const AllMails = () => {
                     </table>
 
 
-                    <table className={notice_table.table} style={{width: '10%'}}>
+                    <table className={notice_table.table} style={{width: '12%'}}>
                                 <tr>
                                     <th style={{padding: '8px'}}>City</th>
                                 </tr>
@@ -197,10 +201,7 @@ const AllMails = () => {
                                 </>
                             )
                         })
-                       }
-                                    
-                                   
-                             
+                       }     
                     </table>
                 </div>
         </>

@@ -8,3 +8,25 @@
     padding: 5px;
     border: 1px solid #dddddd;
 }
+
+
+@media(max-width: 1440px){
+    .inner {
+      overflow: scroll;
+      padding-top: 30px;
+      width: 1000px;
+      height: 500px;
+    }
+
+  }
+
+
+  @media(max-width: 1024px){
+    .inner {
+      overflow: scroll;
+      width: 900px;
+      padding-top: 30px;
+      height: 500px;
+    }
+
+  }
