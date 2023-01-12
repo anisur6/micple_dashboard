@@ -479,3 +479,8 @@ th {
 .panel.active {
   display: block;
 }
+
+.select_button{
+  background: gray;
+  color: white;
+}

@@ -15,10 +15,11 @@ const AllMails = () => {
 
 
 
-    
+    const [selectItem, SetSelectItem] = useState(false);
 
 
-    
+
+
    
    useEffect(() => {
        fetch("user.json")
@@ -29,6 +30,11 @@ const AllMails = () => {
 
     const country = [...new Set(data.map(item => item.country))]
     country.sort();
+
+    
+ 
+
+
  
     const handleCountry = (e) => {
         let states = data.filter(state => state.country === e);
@@ -52,9 +58,26 @@ const AllMails = () => {
 
     const handleUserId = (e) => {
         let singleUser = data.filter(user => user.userId === e);
-        console.log(singleUser.length);
         setSingleUserInfo(singleUser);
     }
+
+
+
+   
+    let userCollection = [];
+
+    data.map((item) => {
+          const userId = item.country;
+          const index = userCollection.findIndex((item) => item.country === userId);
+          console.log(index);
+          if (index === -1) {
+              const contendor = { ...item, count: 1 };
+              userCollection.push(contendor);
+            } else {
+              userCollection[index]["count"] += 1;
+            }
+  
+     }, [])
 
 
 
@@ -71,12 +94,11 @@ const AllMails = () => {
 
                         <tr>
                         {
-                            country.map((item) => {
+                            userCollection.map((contendor) => {
                                 return(
                                     <>
-                                     <tr onClick={() => handleCountry(item)}>
-                                        <button className={notice_table.select_button} key={item}>{item}</button>
-
+                                     <tr onClick={() => handleCountry(contendor.country)}>
+                                        <button className={notice_table.select_button} >{contendor.country} {contendor.count}</button>
                                      </tr>
                                     </>
                                 )
@@ -130,21 +152,22 @@ const AllMails = () => {
                                 <tr>
                                     <th style={{padding: '8px'}}>User_ID</th>
                                 </tr>
-
-
                                 {
                                 userId.map((item) => {
                                     return(
                                         <>
                                         <tr>
                                         <td onClick={() => handleUserId(item)}>
+                                            
                                             <button className={notice_table.select_button} key={item} >{item}</button>
+                                            
                                         </td>
                                         </tr> 
                                         </>
                                         )
                                     })
-                                }       
+                                }   
+   
                     </table>
 
 

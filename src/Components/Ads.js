@@ -4,43 +4,60 @@ const Ads = () => {
 
     const [data, setData] = useState([]);
 
-
-
     useEffect(() => {
-        fetch("user.json")
-        .then(res => res.json())
-        .then(data => setData(data))
-    }, [])
+      fetch("user.json")
+      .then(res => res.json())
+      .then(country => setData(country))
+   }, [])
 
-    const uniqueContendor = [];
- 
-    data.map((user) => {
-        const userId = user.userId;
-        const index = uniqueContendor.findIndex((item) => item.userId === userId);
 
+   const country = [...new Set(data.map(item => item.country))]
+   country.sort();
+
+
+
+   let userCollection = [];
+
+  data.map((item) => {
+        const userId = item.country;
+        const index = userCollection.findIndex((item) => item.country === userId);
+        console.log(index);
         if (index === -1) {
-            const contendor = { ...user, count: 1 };
-            uniqueContendor.push(contendor);
+            const contendor = { ...item, count: 1 };
+            userCollection.push(contendor);
           } else {
-            uniqueContendor[index]["count"] += 1;
+            userCollection[index]["count"] += 1;
           }
-    }, [])
+
+   }, [])
 
 
-
+ 
+  
  return (
         <div className='external'>
-                 {
-                        uniqueContendor.map((contendor) => {
+         
+                {
+                        userCollection.map((contendor) => {
                             return (                              
                               <div>
-                                <p className=' fs-5 fw-bold'>{contendor.userId}</p>
-                                <p className='mt-3 text-primary fs-2 fw-bold'>{contendor.count}</p>
+                                <p className=' fs-5 fw-bold'>{contendor.country} = {contendor.userId} ({contendor.count})</p>
                               </div>                                       
                             )
                           })
                 }
-          
+
+
+{/*                 
+                 {
+                        country.map((contendor) => {
+                            return (                              
+                              <>
+                                <p className='mt-3 text-primary fs-2 fw-bold'>{contendor}({contendor.count})</p>
+                              </>                                       
+                            )
+                          })
+                } */}
         </div>
     );
 };
