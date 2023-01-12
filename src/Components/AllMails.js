@@ -10,7 +10,12 @@ const AllMails = () => {
     const [getStates, setGetStates] = useState([]);
     const [cities, setCities] = useState([]);
     const [userId, setUserId] = useState([]);
-    const [singleUserInfo, setSingleUserInfo] = useState([])
+    const [singleUserInfo, setSingleUserInfo] = useState([]);
+
+
+
+
+    
 
 
     
@@ -56,7 +61,7 @@ const AllMails = () => {
     return (
         <>
 
-        
+
                 <div className={notice_table.inner}>
           
                     <table className={notice_table.table} style={{width: '5%'}}>
