@@ -1,0 +1,24 @@
+[
+    {
+        "id" : 1,
+        "user_id" : "sdf33423",
+        "user_name" : "saddam Khan",
+        "user_country" : "Australia",
+        "user_state" : "Victoria",
+        "city" : "seaford",
+        "mails" : [
+            {
+                "id" : 23213,
+                "mail_sub" : "mail system is'nt solving",
+                "mail_body" : " i am trying hard ti solve the mail issue",
+                "mail_status" : true
+            },
+            {
+                "id" : 42343,
+                "mail_sub" : "forget Password",
+                "mail_body" : " i am trying hard to solve the password issue",
+                "mail_status" : true
+            }
+        ]
+    }
+]

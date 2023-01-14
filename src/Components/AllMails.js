@@ -11,16 +11,30 @@ const AllMails = () => {
     const [cities, setCities] = useState([]);
     const [userId, setUserId] = useState([]);
     const [singleUserInfo, setSingleUserInfo] = useState([]);
+    
 
 
 
 
-    const [selectItem, SetSelectItem] = useState(false);
+
+
+    const [selectedButton, setSelectedButton] = useState(null);
+    const [selectedButton1, setSelectedButton1] = useState(null);
+
+
+
+      const handleButtonClick = (id) => {
+        setSelectedButton(id);
+      };
+
+      const handleButtonClick1 = (id) => {
+        setSelectedButton1(id);
+      };
 
 
 
 
-   
+
    useEffect(() => {
        fetch("user.json")
        .then(res => res.json())
@@ -28,14 +42,10 @@ const AllMails = () => {
     }, [])
 
 
-    const country = [...new Set(data.map(item => item.country))]
-    country.sort();
+    // const country = [...new Set(data.map(item => item.country))]
+    // country.sort();
 
     
- 
-
-
- 
     const handleCountry = (e) => {
         let states = data.filter(state => state.country === e);
         states = [...new Set(states.map(item => item.state))];
@@ -43,6 +53,7 @@ const AllMails = () => {
         setGetStates(states);
     }
 
+    console.log(getStates);
 
     const handleStates = (e) => {
         let cities = data.filter(city => city.state === e);
@@ -70,7 +81,7 @@ const AllMails = () => {
     data.map((item) => {
           const userId = item.country;
           const index = userCollection.findIndex((item) => item.country === userId);
-          console.log(index);
+        //   console.log(index);
           if (index === -1) {
               const contendor = { ...item, count: 1 };
               userCollection.push(contendor);
@@ -102,7 +113,7 @@ const AllMails = () => {
                                 return(
                                     <>
                                      <tr onClick={() => handleCountry(contendor.country)}>
-                                        <button className={notice_table.select_button} >{contendor.country} ({contendor.count})</button>
+                                        <button  onClick={() => handleButtonClick(contendor.id)} style={{ backgroundColor : selectedButton === contendor.id ? "blue" : "white", }} className={notice_table.select_button} >{contendor.country} ({contendor.count})</button>
                                      </tr>
                                     </>
                                 )
@@ -122,7 +133,7 @@ const AllMails = () => {
                                         <>
                                         <tr>
                                         <td onClick={() => handleStates(item)}>
-                                            <button className={notice_table.select_button} key={item} >{item}</button>
+                                            <button onClick={() => handleButtonClick1(item)} style={{ backgroundColor : selectedButton1 === item ? "blue" : "white", }}  className={notice_table.select_button}>{item}</button>
                                         </td>
                                         </tr> 
                                         </>

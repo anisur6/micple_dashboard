@@ -37,7 +37,7 @@
 
 .data_body{
   background-color: rgb(248, 248, 248);
-  height: 900px;
+  height: 1000px;
 }
 
 .sidebar_Links{
@@ -491,6 +491,29 @@ th {
 @media(max-width: 1024px){
   .side_bar {
     width: 25%;
+  }
+
+}
+
+
+
+@media(max-width: 1440px){
+  .inner {
+    overflow: scroll;
+    padding-top: 30px;
+    width: 1000px;
+    height: 500px;
+  }
+
+}
+
+
+@media(max-width: 1024px){
+  .inner {
+    overflow: scroll;
+    width: 900px;
+    padding-top: 30px;
+    height: 500px;
   }
 
 }

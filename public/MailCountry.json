@@ -1,0 +1,38 @@
+[
+    {
+        "id" : 1,
+        "country_name" : "Austrolia",
+        "total_user_count" : 8,
+        "state" :[
+            {
+                "State_name" : "Victoria",
+                "state_user_count" : 3,
+                "city" : [
+                    {
+                        "city_name" : "sunbury",
+                        "city_user_count" : 2
+                    },
+                    {
+                        "city_name" : "seaford",
+                        "city_user_count" : 1
+                    }
+                ]
+            },
+            {
+                "State_name" : "Tasmaniea",
+                "state_user_count" : 5,
+                "city" : [
+                    {
+                        "city_name" : "Hobart",
+                        "city_user_count" : 2
+                    },
+                    {
+                        "city_name" : "Burnia",
+                        "city_user_count" : 3
+                    }
+                ]
+            }
+
+        ]
+    }
+]
