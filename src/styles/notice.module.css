@@ -113,11 +113,6 @@
     width: 100%;
   }
 
-  .select_button:focus{
-    background: gray;
-    color: white;
-  }
-
   .user_table{
     font-size: 15px;
     padding: 30px;

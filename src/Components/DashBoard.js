@@ -10,6 +10,8 @@ import Notice from './Notice';
 import Ads from './Ads';
 import UserMail from './UserMail';
 import DefaultUser from './DefaultUser';
+import Test from './Test';
+import Test1 from './Test1';
 
 
 
@@ -38,8 +40,8 @@ const DashBoard = () => {
                         <li className='sidebar_Links'><NavLink to="defaultUser" className='bar_links'><p>User</p> <p>(125)</p></NavLink></li>
                         <li className='sidebar_Links'><NavLink to="adds" className='bar_links'><p>Ads</p> <p>(12)</p></NavLink></li>
                         <li className='sidebar_Links'><NavLink to="mails" className='bar_links'><p>Mail</p> <p>(452)</p></NavLink></li>
-                        <li className='sidebar_Links'><NavLink to="seenmails" className='bar_links'><p>Live Chat</p> <p>(100)</p></NavLink></li>
-                        <li className='sidebar_Links'><NavLink to="notewweice" className='bar_links'><p>Repost</p> <p>(15)</p></NavLink></li>
+                        <li className='sidebar_Links'><NavLink to="test" className='bar_links'><p>Live Chat</p> <p>(100)</p></NavLink></li>
+                        <li className='sidebar_Links'><NavLink to="test1" className='bar_links'><p>Repost</p> <p>(15)</p></NavLink></li>
                         <li className='sidebar_Links'><NavLink to="notsdfsdfice" className='bar_links'><p>Recycle</p> <p>(12)</p></NavLink></li>
                         <li className='sidebar_Links'><NavLink to="dfgd" className='bar_links'><p>Restriction</p> <p>(22)</p></NavLink></li>
                         <li className='sidebar_Links'><NavLink to="nodfgfdtice" className='bar_links'><p>Ads Rate</p> <p>(02)</p></NavLink></li>
@@ -115,6 +117,8 @@ const DashBoard = () => {
                     <Route path="/notice" element={<Notice />} />
                     <Route path="/adds" element={<Ads />} />
                     <Route path="/mails" element={<UserMail />} />
+                    <Route path="/test" element={<Test />} />
+                    <Route path="/test1" element={<Test1 />} />
                     <Route path="/defaultUser" element={<DefaultUser />} />
                 </Routes>
             </div>

@@ -16,23 +16,34 @@ const AllMails = () => {
 
 
 
-
-
+    // <--------- onClick to select fielSet --------->
+    
     const [selectedButton, setSelectedButton] = useState(null);
     const [selectedButton1, setSelectedButton1] = useState(null);
-
-
-
-      const handleButtonClick = (id) => {
+    const [selectedButton2, setSelectedButton2] = useState(null);
+    const [selectedButton3, setSelectedButton3] = useState(null);
+    
+    
+    
+    const handleButtonClick = (id) => {
         setSelectedButton(id);
-      };
-
-      const handleButtonClick1 = (id) => {
+    };
+    
+    const handleButtonClick1 = (id) => {
         setSelectedButton1(id);
       };
-
-
-
+    
+    const handleButtonClick2 = (id) => {
+        setSelectedButton2(id);
+    };
+    
+    const handleButtonClick3 = (id) => {
+        setSelectedButton3(id);
+      };
+      
+      
+      
+      // <--------- onClick to select fielSet --------->
 
 
    useEffect(() => {
@@ -53,7 +64,7 @@ const AllMails = () => {
         setGetStates(states);
     }
 
-    console.log(getStates);
+
 
     const handleStates = (e) => {
         let cities = data.filter(city => city.state === e);
@@ -113,7 +124,7 @@ const AllMails = () => {
                                 return(
                                     <>
                                      <tr onClick={() => handleCountry(contendor.country)}>
-                                        <button  onClick={() => handleButtonClick(contendor.id)} style={{ backgroundColor : selectedButton === contendor.id ? "blue" : "white", }} className={notice_table.select_button} >{contendor.country} ({contendor.count})</button>
+                                        <button  onClick={() => handleButtonClick(contendor.id)} style={{ backgroundColor : selectedButton === contendor.id ? "gray" : "white", color : selectedButton === contendor.id ? "white" : "" }} className={notice_table.select_button} >{contendor.country} ({contendor.count})</button>
                                      </tr>
                                     </>
                                 )
@@ -133,7 +144,7 @@ const AllMails = () => {
                                         <>
                                         <tr>
                                         <td onClick={() => handleStates(item)}>
-                                            <button onClick={() => handleButtonClick1(item)} style={{ backgroundColor : selectedButton1 === item ? "blue" : "white", }}  className={notice_table.select_button}>{item}</button>
+                                            <button onClick={() => handleButtonClick1(item)} style={{ backgroundColor : selectedButton1 === item ? "gray" : "white", color : selectedButton1 === item ? "white" : "" }}  className={notice_table.select_button}>{item}</button>
                                         </td>
                                         </tr> 
                                         </>
@@ -154,7 +165,7 @@ const AllMails = () => {
                                         <>
                                         <tr>
                                         <td onClick={() => handleCities(item)}>
-                                            <button className={notice_table.select_button} key={item} >{item}</button>
+                                            <button onClick={() => handleButtonClick2(item)} style={{ backgroundColor : selectedButton2 === item ? "gray" : "white", color : selectedButton2 === item ? "white" : "" }}  className={notice_table.select_button} >{item}</button>
                                         </td>
                                         </tr> 
                                         </>
@@ -174,7 +185,7 @@ const AllMails = () => {
                                         <tr>
                                         <td onClick={() => handleUserId(item)}>
                                             
-                                            <button className={notice_table.select_button} key={item} >{item}</button>
+                                            <button onClick={() => handleButtonClick3(item)} style={{ backgroundColor : selectedButton3 === item ? "gray" : "white", color : selectedButton3 === item ? "white" : "" }}   className={notice_table.select_button} >{item}</button>
                                             
                                         </td>
                                         </tr> 

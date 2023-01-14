@@ -6,6 +6,9 @@ import notice_table from './../styles/notice.module.css';
 const Seenmails = () => {
     return (
         <>
+
+
+        <p>lorem44</p>
             <div className={notice_table.inner}>
                     {/* <p style={{marginBottom: '10px'}}>Massage whice are already seen</p> */}
                     <table className={notice_table.table}>

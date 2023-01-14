@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "country_name" : "Austrolia",
-        "total_user_count" : 8,
+        "total_Mail_count" : 8,
         "state" :[
             {
                 "State_name" : "Victoria",
@@ -31,8 +31,70 @@
                         "city_user_count" : 3
                     }
                 ]
+            },
+            {
+                "State_name" : "Almond",
+                "state_user_count" : 5,
+                "city" : [
+                    {
+                        "city_name" : "Hobart",
+                        "city_user_count" : 2
+                    },
+                    {
+                        "city_name" : "Burnia",
+                        "city_user_count" : 3
+                    }
+                ]
             }
-
+        ]
+    },
+    {
+        "id" : 2,
+        "country_name" : "Bangladesh",
+        "total_Mail_count" : 8,
+        "state" :[
+            {
+                "State_name" : "Ctg",
+                "state_user_count" : 3,
+                "city" : [
+                    {
+                        "city_name" : "Raozan",
+                        "city_user_count" : 2
+                    },
+                    {
+                        "city_name" : "Hathajari",
+                        "city_user_count" : 1
+                    }
+                ]
+            },
+            {
+                "State_name" : "Dhaka",
+                "state_user_count" : 5,
+                "city" : [
+                    {
+                        "city_name" : "kelketh",
+                        "city_user_count" : 2
+                    },
+                    {
+                        "city_name" : "uttora",
+                        "city_user_count" : 3
+                    }
+                ]
+            },
+            {
+                "State_name" : "Kustia",
+                "state_user_count" : 5,
+                "city" : [
+                    {
+                        "city_name" : "Hobart",
+                        "city_user_count" : 2
+                    },
+                    {
+                        "city_name" : "Burnia",
+                        "city_user_count" : 3
+                    }
+                ]
+            }
         ]
     }
 ]

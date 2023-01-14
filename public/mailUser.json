@@ -5,7 +5,7 @@
         "user_name" : "saddam Khan",
         "user_country" : "Australia",
         "user_state" : "Victoria",
-        "city" : "seaford",
+        "city_name" : "seaford",
         "mails" : [
             {
                 "id" : 23213,
