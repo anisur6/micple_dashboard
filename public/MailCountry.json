@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "country_name" : "Austrolia",
-        "total_Mail_count" : 8,
+        "total_Mail_count" : 13,
         "state" :[
             {
                 "State_name" : "Victoria",
@@ -10,11 +10,57 @@
                 "city" : [
                     {
                         "city_name" : "sunbury",
-                        "city_user_count" : 2
+                        "city_user_count" : 2,
+                        "user_mail" : [
+                            {
+                                "id" : 1,
+                                "user_id" : "saddam",
+                                "mails" : [
+                                    {
+                                        "id" : 42343,
+                                        "user_name" : "saddam Khan",
+                                        "ip" : "121.123.121.453",
+                                        "mail_sub" : "forget Password",
+                                        "mail_body" : " i am trying hard to solve the password issue",
+                                        "mail_status" : true
+                                    }
+                                ]
+                            },
+                            {
+                                "id" : 2,
+                                "user_id" : "sdf33423",
+                                "mails" : [
+                                    {
+                                        "id" : 23213,
+                                        "user_name" : "kabir sing",
+                                        "ip" : "111.233.121.453",
+                                        "mail_sub" : "mail system is'nt solving",
+                                        "mail_body" : " i am trying hard ti solve the mail issue",
+                                        "mail_status" : true
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "city_name" : "seaford",
-                        "city_user_count" : 1
+                        "city_user_count" : 1,
+                        "user_mail" : [
+                            {
+                                "id" : 23,
+                                "user_id" : "sasf23",
+                                "mails" : [
+                                    {
+                                        "id" : 4532,
+                                        "user_name" : "salman",
+                                        "ip" : "221.543.121.453",
+                                        "mail_sub" : "responsive issue",
+                                        "mail_body" : "the user interface is not user friendly",
+                                        "mail_status" : true
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -24,11 +70,67 @@
                 "city" : [
                     {
                         "city_name" : "Hobart",
-                        "city_user_count" : 2
+                        "city_user_count" : 2,
+                        "user_mail" : [
+                            {
+                                "id" : 23,
+                                "user_id" : "sasf23",
+                                "mails" : [
+                                    {
+                                        "id" : 4532,
+                                        "user_name" : "muktadir",
+                                        "ip" : "211.543.121.453",
+                                        "mail_sub" : "no idea what is happening",
+                                        "mail_body" : "the user interface is not user friendly",
+                                        "mail_status" : true
+                                    },
+                                    {
+                                        "id" : 4532,
+                                        "user_name" : "muktadir",
+                                        "ip" : "211.543.121.453",
+                                        "mail_sub" : "add friend request",
+                                        "mail_body" : "i cannot send friend request to other user",
+                                        "mail_status" : true
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "city_name" : "Burnia",
-                        "city_user_count" : 3
+                        "city_user_count" : 3,
+                        "user_mail" : [
+                            {
+                                "id" : 23,
+                                "user_id" : "sasf23",
+                                "mails" : [
+                                    {
+                                        "id" : 4532,
+                                        "user_name" : "aslam",
+                                        "ip" : "221.543.121.453",
+                                        "mail_sub" : "no idea what is happening",
+                                        "mail_body" : "i do not see log out button",
+                                        "mail_status" : true
+                                    },
+                                    {
+                                        "id" : 23432,
+                                        "user_name" : "aslam",
+                                        "ip" : "221.543.121.452",
+                                        "mail_sub" : "app internal issue",
+                                        "mail_body" : "how to send friend request to other users",
+                                        "mail_status" : true
+                                    },
+                                    {
+                                        "id" : 234,
+                                        "user_name" : "aslam",
+                                        "ip" : "221.543.121.452",
+                                        "mail_sub" : "app internal issues",
+                                        "mail_body" : "i cannot see campagin options",
+                                        "mail_status" : true
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -37,11 +139,11 @@
                 "state_user_count" : 5,
                 "city" : [
                     {
-                        "city_name" : "Hobart",
+                        "city_name" : "kerel",
                         "city_user_count" : 2
                     },
                     {
-                        "city_name" : "Burnia",
+                        "city_name" : "vusal",
                         "city_user_count" : 3
                     }
                 ]
@@ -51,7 +153,7 @@
     {
         "id" : 2,
         "country_name" : "Bangladesh",
-        "total_Mail_count" : 8,
+        "total_Mail_count" : 10,
         "state" :[
             {
                 "State_name" : "Ctg",
@@ -83,15 +185,64 @@
             },
             {
                 "State_name" : "Kustia",
+                "state_user_count" : 2,
+                "city" : [
+                    {
+                        "city_name" : "kalihati",
+                        "city_user_count" : 1
+                    },
+                    {
+                        "city_name" : "moulovi bazaer",
+                        "city_user_count" : 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id" : 3,
+        "country_name" : "India",
+        "total_Mail_count" : 15,
+        "state" :[
+            {
+                "State_name" : "Dheli",
+                "state_user_count" : 6,
+                "city" : [
+                    {
+                        "city_name" : "Firozobad",
+                        "city_user_count" : 4
+                    },
+                    {
+                        "city_name" : "Jahanpanah",
+                        "city_user_count" : 2
+                    }
+                ]
+            },
+            {
+                "State_name" : "West Bangle",
                 "state_user_count" : 5,
                 "city" : [
                     {
-                        "city_name" : "Hobart",
+                        "city_name" : "Kolkata",
+                        "city_user_count" : 3
+                    },
+                    {
+                        "city_name" : "Siliguri",
+                        "city_user_count" : 2
+                    }
+                ]
+            },
+            {
+                "State_name" : "South India",
+                "state_user_count" : 4,
+                "city" : [
+                    {
+                        "city_name" : "Chennai",
                         "city_user_count" : 2
                     },
                     {
-                        "city_name" : "Burnia",
-                        "city_user_count" : 3
+                        "city_name" : "Vijayawada",
+                        "city_user_count" : 2
                     }
                 ]
             }
