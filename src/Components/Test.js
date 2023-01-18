@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BiReset } from 'react-icons/bi';
+import { BiReset, BiSend } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import notice_table from './../styles/notice.module.css';
 import loading from './loading.gif'
@@ -28,7 +28,7 @@ const Test = () => {
             setIsLoading(true);
 
             setTimeout(() => {
-                setGetStates([])
+            setGetStates([])
             setCities([])
             setUserId([])
             setSingleUserInfo([])
@@ -135,10 +135,10 @@ const Test = () => {
     
     return (
         <>
-
-            {isLoading && <div className={notice_table.reset_loader}><img style={{height: '200px', width: 'auto'}} src={loading} alt="gdfg" /></div>}
+            {isLoading && <div className={notice_table.reset_loader}><img style={{height: '200px', width: 'auto'}} src={loading} alt="gdfg" />
+            <div></div>
+            </div>}
            
-
             <div className={notice_table.inner} style={{paddingTop: '30px'}}>
                 <table className={notice_table.table} style={{ width: '10%' }}>
                     <tr>
@@ -238,20 +238,33 @@ const Test = () => {
                                 <>
                                     <tr>
                                         <td>
-                                        <div style={{height: '400px', width: '100%', backgroundColor: 'white'}}>
-                                            <div style={{borderBottom: '1px solid lightgray', padding: '5px'}}><p style={{padding: '3px', fontSize: '12px'}}>  <span style={{fontWeight: 'bold', color: 'black'}}>({items.user_name})</span> | <span style={{fontWeight: 'bold', color: 'gray'}}> Sub :</span> {items.mail_sub}</p></div>
-                                            <div style={{padding: '5px'}}><p><span style={{fontWeight: 'bold', color: 'gray'}}>Massage :</span> {items.mail_body}</p></div>
+                                            <div style={{height: '400px', width: '100%', backgroundColor: 'white'}}>
+                                                <div style={{borderBottom: '1px solid lightgray', padding: '5px'}}> 
+                                                <span style={{fontWeight: 'bold', fontSize: '12px', color: 'black'}}>{items.user_name} ({items.user_id})</span> 
+                                                <br/> 
+                                                <p style={{fontWeight: 'bold', paddingTop: '5px'}}>{items.mail_sub}</p> 
+                                                </div>
 
-                                        </div>
-                                        <hr style={{backgroundColor: 'lightgray'}} />
+                                                <div style={{textAlign: 'start', width: '80%' }}>
+                                                    <p style={{backgroundColor: 'lightgray',fontSize: '12px',  borderRadius: '10px 10px 10px 0px', padding: '5px', margin: '5px 5px 2px 5px'}}>{items.mail_body}</p>
+                                                    <p style={{fontSize: '9px', color: 'gray', marginLeft: '5px'}}>05/01/2022, 17:31</p>
+                                                </div>
+
+                                                <div style={{width: '80%', marginLeft: 'auto', textAlign: 'end'}}>
+                                                    <p style={{backgroundColor: 'gray', fontSize: '12px', borderRadius: '10px 10px 0px 10px', padding: '5px', margin: '5px 5px 2px 5px', color: 'white'}}>{items.mail_body}</p>
+                                                    <p style={{fontSize: '9px', color: 'gray', marginRight: '5px'}}>05/01/2022, 18:11</p>
+                                                </div>
+                                            </div>
+
+                                            <hr style={{backgroundColor: 'lightgray'}} />
 
 
-                                        <div style={{height: '400px', width: '100%', backgroundColor: 'white'}}>
-                                            <p  style={{fontWeight: 'bold', color: 'gray', padding: '5px'}}>Send response</p>
-                                            <textarea rows={14} className={notice_table.mail_input} type="text" placeholder="type replay" ></textarea>
-                                            <button style={{margin: '5px', padding: '5px 15px'}}>Send</button>
+                                            <div style={{height: '400px', width: '100%', backgroundColor: 'white'}}>
+                                                <p  style={{fontWeight: 'bold', color: 'gray', padding: '5px'}}>Send response</p>
+                                                <textarea rows={14} className={notice_table.mail_input} type="text" placeholder="type replay" ></textarea>
+                                                <button style={{margin: '5px', padding: '5px 15px'}}><BiSend styke={{fontSize: '25px'}} /></button>
 
-                                        </div>
+                                            </div>
                                         </td>
                                     </tr>
 

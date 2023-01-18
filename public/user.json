@@ -60,13 +60,15 @@
         "state": "Khulna",
         "country": "Bangladesh",
         "postcode": 4526,
-        "mail": {
-            "mail_sub": "payment Issue",
-            "mail_msg": "i didn't recive my confirmation mail",
-            "total_mail": "4",
-            "ans_mail": "true",
-            "not_ans_mail": "false"
-        }
+        "mail": [
+            {
+                "mail_sub": "payment Issue",
+                "mail_msg": "i didn't recive my confirmation mail",
+                "total_mail": "4",
+                "ans_mail": "true",
+                "not_ans_mail": "false"
+            }
+        ]
     },
     {
         "id": 4,
@@ -129,13 +131,28 @@
         "state": "Gujrat",
         "country": "India",
         "postcode": 4526,
-        "mail": {
-            "mail_sub": "payment Issue",
-            "mail_msg": "i forgot my user id? how to retrive my password ?",
-            "total_mail": "4",
-            "ans_mail": "true",
-            "not_ans_mail": "false"
-        }
+        "mail": [
+            {
+                "mail_sub": "payment Issue",
+                "mail_msg": "i forgot my user id? how to retrive my password ?",
+                "total_mail": "4",
+                "ans_mail": "true",
+                "not_ans_mail": "false"
+            },
+            {
+                "mail_sub": "payment Issue",
+                "mail_msg": "i forgot my user id? how to retrive my password ?",
+                "total_mail": "4",
+                "ans_mail": "true",
+                "not_ans_mail": "false"
+            },{
+                "mail_sub": "payment Issue",
+                "mail_msg": "i forgot my user id? how to retrive my password ?",
+                "total_mail": "4",
+                "ans_mail": "true",
+                "not_ans_mail": "false"
+            }
+        ]
     },
     {
         "id": 7,

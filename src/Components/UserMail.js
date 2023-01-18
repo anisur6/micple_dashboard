@@ -30,15 +30,20 @@ const UserMail = () => {
     
 
                 <div className="panels">
+
                     <div className={`panel ${checkActive(1, "active")}`}>
                     <AllMails />
                     </div>
+
                     <div className={`panel ${checkActive(2, "active")}`}>
                     <Seenmails />
                     </div>
+
                     <div className={`panel ${checkActive(3, "active")}`}>
                     <UnseenMails />
                     </div>
+                    
+
                 </div>
 
                
