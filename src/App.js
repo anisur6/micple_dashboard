@@ -20,20 +20,20 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<DashBoard/>}>
-            <Route path="/notice" element={<Notice/>} />
-            <Route path="/adds" element={<Ads/>} />
-            <Route path="/main" element={<DashHome/>} />
-            <Route path="/defaultUser" element={<DefaultUser/>} />
-            <Route path="/test" element={<Test/>} />
+          <Route path="/" element={<DashBoard />}>
+            <Route path="/notice" element={<Notice />} />
+            <Route path="/adds" element={<Ads />} />
+            <Route path="/main" element={<DashHome />} />
+            <Route path="/defaultUser" element={<DefaultUser />} />
+            <Route path="/test" element={<Test />} />
             <Route path="/mails" element={<UserMail />} />
             <Route path="/allmails" element={<AllMails />} />
             <Route path="/seenmails" element={<Seenmails />} />
             <Route path="/unseenmails" element={<UnseenMails />} />
-            
           </Route>
-            <Route path="/ipinfo" element={<IpInfo/>} />
-            <Route path="/test1" element={<Test1/>} />
+
+            <Route path="/test1" element={<Test1 />} />
+            <Route path="/ipinfo" element={<IpInfo />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -102,7 +102,7 @@ const DashBoard = () => {
                 </div>
             </div>
 
-            <div className='data_description'>             
+            <div className='data_description' style={{backgroundColor: 'rgb(248, 248, 248)', height: '950px'}}>             
                 {!isShown ? 
                 <>
                     <div className='toggle_btn' onClick={toggleBtn}><BiRightArrow className='toggoler' /></div>

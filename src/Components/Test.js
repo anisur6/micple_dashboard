@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { BiReset } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 import notice_table from './../styles/notice.module.css';
-
+import loading from './loading.gif'
 
 
 
@@ -11,6 +13,32 @@ const Test = () => {
     const [cities, setCities] = useState([]);
     const [userId, setUserId] = useState([]);
     const [singleUserInfo, setSingleUserInfo] = useState([]);
+    const [singleUserInput, setSingleUserInput] = useState([])
+
+
+
+
+
+
+        //    << ------------- handle loading -------- >>
+
+        const [isLoading, setIsLoading] = useState(false);
+
+        const handleLoading = () => {
+            setIsLoading(true);
+
+            setTimeout(() => {
+                setGetStates([])
+            setCities([])
+            setUserId([])
+            setSingleUserInfo([])
+            setSingleUserInput([])
+            setIsLoading(false);
+            }, 5000);
+        };
+
+        
+        //    << ------------- handle loading -------- >>
 
 
 
@@ -25,6 +53,7 @@ const Test = () => {
     const [selectedButton1, setSelectedButton1] = useState(null);
     const [selectedButton2, setSelectedButton2] = useState(null);
     const [selectedButton3, setSelectedButton3] = useState(null);
+    const [selectedButton4, setSelectedButton4] = useState(null);
 
 
 
@@ -33,6 +62,7 @@ const Test = () => {
         setSelectedButton1(!id);
         setSelectedButton2(!id);
         setSelectedButton3(!id);
+        setSelectedButton4(!id);
     };
 
     const handleButtonClick1 = (id) => {
@@ -45,6 +75,10 @@ const Test = () => {
 
     const handleButtonClick3 = (id) => {
         setSelectedButton3(id);
+    };
+
+    const handleButtonClick4 = (id) => {
+        setSelectedButton4(id);
     };
 
 
@@ -86,33 +120,33 @@ const Test = () => {
         setSingleUserInfo(SelectState)
     }
 
-
-    const resetFunc = () => {
-            setGetStates([])
-            setCities([])
-            setUserId([])
-            setSingleUserInfo([])
+    
+    const handleUserInput = (items) => {
+        let state = items.mail
+        const SelectState = state.map((item) => item)
+        setSingleUserInput(SelectState)
     }
 
 
+ 
 
 
+
+    
     return (
         <>
 
-<div style={{padding: '30px'}}>
-              <button style={{padding: '10px 20px', fontSize: '15px'}} onClick={() => resetFunc()}>reset button</button>
-              </div>
+            {isLoading && <div className={notice_table.reset_loader}><img style={{height: '200px', width: 'auto'}} src={loading} alt="gdfg" /></div>}
+           
 
-
-
-            <div className={notice_table.inner}>
-             
-                
-
-                <table className={notice_table.table} style={{ width: '15%' }}>
+            <div className={notice_table.inner} style={{paddingTop: '30px'}}>
+                <table className={notice_table.table} style={{ width: '10%' }}>
                     <tr>
-                        <th style={{ padding: '8px' }}>Country</th>
+                        <th style={{ padding: '5px' }}>
+                            <div style={{display: 'flex', justifyContent: 'space-around'}}>
+                                <p>Country</p>
+                                <p><BiReset onClick={handleLoading} style={{cursor: 'pointer', backgroundColor: 'gray', borderRadius: '50%', padding: '2px', fontSize: '20px', color: "white"}} /></p>
+                            </div>  </th> 
                     </tr>
 
                     {data.map((item) => {
@@ -126,7 +160,7 @@ const Test = () => {
                         })}
                 </table>
 
-                <table className={notice_table.table} style={{ width: '15%' }}>
+                <table className={notice_table.table} style={{ width: '8%' }}>
                     <tr>
                         <th style={{ padding: '8px' }}>State</th>
                     </tr>
@@ -140,8 +174,7 @@ const Test = () => {
                     })}
                 </table>
 
-
-                <table className={notice_table.table} style={{ width: '12%' }}>
+                <table className={notice_table.table} style={{ width: '8%' }}>
                     <tr>
                         <th style={{ padding: '8px' }}>City</th>
                     </tr>
@@ -154,7 +187,7 @@ const Test = () => {
                         })}  
                 </table>
 
-                <table className={notice_table.table} style={{ width: '10%' }}>
+                <table className={notice_table.table} style={{ width: '7%' }}>
                     <tr>
                         <th style={{ padding: '8px' }}>User_ID</th>
                     </tr>
@@ -167,33 +200,71 @@ const Test = () => {
                             })}   
                 </table>
 
-
-                <table className={notice_table.user_table}>
+                <table className={notice_table.user_table} style={{ width: '55%' }}>
                     <tr>
                         <th>Name</th>
                         <th>Subject</th>
                         <th>Massage Body</th>
                         <th>IP Info</th>
+                        <th>Date</th>
                         <th>Status</th>
-                        <th>Action</th>
                     </tr>
                     {
                         singleUserInfo.map((items) => {
                             return (
                                 <>
                                     <tr>
-                                        <td>{items.user_name}</td>
+                                        <td  onClick={() => handleUserInput(items)}> <button onClick={() => handleButtonClick4(items)} style={{ backgroundColor : selectedButton4 === items ? "gray" : "white", color : selectedButton4 === items ? "white" : "" }}   className={notice_table.select_button} >{items.user_name}</button></td>
                                         <td >{items.mail_sub}</td>
                                         <td>{items.mail_body}</td>
                                         <td>{items.ip}</td>
+                                        <td>{items.date} {items.time}</td>
                                         <td>Panding</td>
-                                        <td><div style={{ display: 'flex' }}><input className={notice_table.mail_input} type="text" placeholder="type replay" /><button className={notice_table.mail_btn} >Replay</button></div></td>
                                     </tr>
                                 </>
                             )
                         })
                     }
                 </table>
+
+
+                <table className={notice_table.user_table} style={{width: '15%'}}>
+                    <tr>
+                        <th>Action</th>
+                    </tr>
+                    {
+                        singleUserInput.map((items) => {
+                            return (
+                                <>
+                                    <tr>
+                                        <td>
+                                        <div style={{height: '400px', width: '100%', backgroundColor: 'white'}}>
+                                            <div style={{borderBottom: '1px solid lightgray', padding: '5px'}}><p style={{padding: '3px', fontSize: '12px'}}>  <span style={{fontWeight: 'bold', color: 'black'}}>({items.user_name})</span> | <span style={{fontWeight: 'bold', color: 'gray'}}> Sub :</span> {items.mail_sub}</p></div>
+                                            <div style={{padding: '5px'}}><p><span style={{fontWeight: 'bold', color: 'gray'}}>Massage :</span> {items.mail_body}</p></div>
+
+                                        </div>
+                                        <hr style={{backgroundColor: 'lightgray'}} />
+
+
+                                        <div style={{height: '400px', width: '100%', backgroundColor: 'white'}}>
+                                            <p  style={{fontWeight: 'bold', color: 'gray', padding: '5px'}}>Send response</p>
+                                            <textarea rows={14} className={notice_table.mail_input} type="text" placeholder="type replay" ></textarea>
+                                            <button style={{margin: '5px', padding: '5px 15px'}}>Send</button>
+
+                                        </div>
+                                        </td>
+                                    </tr>
+
+                                    <Link state={items} to="/test1">Click hare </Link>
+
+                                    
+                                </>
+                            )
+                        })
+                    }
+
+                </table>
+
             </div>
         </>
     );

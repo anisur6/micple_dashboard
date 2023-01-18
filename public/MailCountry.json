@@ -19,10 +19,19 @@
                                     {
                                         "id" : 42343,
                                         "user_name" : "saddam Khan",
-                                        "ip" : "121.123.121.453",
+                                        "date" : "12/12/2022",
+                                        "time" : "(03:12 PM)",
+                                        "ip" : "121.123.121.453 (Dhaka, Bangladesh)",
                                         "mail_sub" : "forget Password",
                                         "mail_body" : " i am trying hard to solve the password issue",
-                                        "mail_status" : true
+                                        "mail": [
+                                            {
+                                                "user_name" : "saddam Khan",
+                                                "mail_sub" : "forget Password",
+                                                "mail_body" : " i am trying hard to solve the password issue",
+                                                "mail_status" : true
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -33,10 +42,19 @@
                                     {
                                         "id" : 23213,
                                         "user_name" : "kabir sing",
-                                        "ip" : "111.233.121.453",
+                                        "date" : "06/01/2023",
+                                        "time" : "(03:12 PM)",
+                                        "ip" : "111.233.121.453 (Dhaka, Bangladesh)",
                                         "mail_sub" : "mail system is'nt solving",
                                         "mail_body" : " i am trying hard ti solve the mail issue",
-                                        "mail_status" : true
+                                        "mail": [
+                                            {
+                                                "user_name" : "kabir sing",
+                                                "mail_sub" : "mail system is'nt solving",
+                                                "mail_body" : " i am trying hard ti solve the mail issue",
+                                                "mail_status" : true
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -53,10 +71,19 @@
                                     {
                                         "id" : 4532,
                                         "user_name" : "salman",
-                                        "ip" : "221.543.121.453",
+                                        "date" : "19/12/2022",
+                                        "time" : "(03:12 PM)",
+                                        "ip" : "221.543.121.453 (Dhaka, Bangladesh)",
                                         "mail_sub" : "responsive issue",
                                         "mail_body" : "the user interface is not user friendly",
-                                        "mail_status" : true
+                                        "mail": [
+                                            {
+                                                "user_name" : "salman",
+                                                "mail_sub" : "responsive issue",
+                                                "mail_body" : "the user interface is not user friendly",
+                                                "mail_status" : true
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -79,18 +106,43 @@
                                     {
                                         "id" : 4532,
                                         "user_name" : "muktadir",
-                                        "ip" : "211.543.121.453",
+                                        "date" : "18/12/2023",
+                                        "time" : "(03:12 PM)",
+                                        "ip" : "211.543.121.453 (Dhaka, Bangladesh)",
                                         "mail_sub" : "no idea what is happening",
                                         "mail_body" : "the user interface is not user friendly",
-                                        "mail_status" : true
-                                    },
+                                        "mail": [
+                                            {
+                                                "user_name" : "muktadir",
+                                                "mail_sub" : "no idea what is happening",
+                                                "mail_body" : "the user interface is not user friendly",
+                                                "mail_status" : true
+                                            }
+                                        ]
+                                        
+                                    }
+                                ]
+                            },
+                            {
+                                "id" : 2323,
+                                "user_id" : "sakin4e3",
+                                "mails" : [
                                     {
                                         "id" : 4532,
-                                        "user_name" : "muktadir",
-                                        "ip" : "211.543.121.453",
-                                        "mail_sub" : "add friend request",
-                                        "mail_body" : "i cannot send friend request to other user",
-                                        "mail_status" : true
+                                        "user_name" : "sakin ahmed",
+                                        "date" : "12/12/2023",
+                                        "time" : "(03:12 PM)",
+                                        "ip" : "211.543.121.453 (Dhaka, Bangladesh)",
+                                        "mail_sub" : "no idea what is going on",
+                                        "mail_body" : "the user interface is not user friendly",
+                                        "mail": [
+                                            {
+                                                "user_name" : "sakin ahmed",
+                                                "mail_sub" : "no idea what is happening",
+                                                "mail_body" : "the user interface is not user friendly",
+                                                "mail_status" : true
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -102,32 +154,66 @@
                         "user_mail" : [
                             {
                                 "id" : 23,
-                                "user_id" : "sasf23",
+                                "user_id" : "as4545",
                                 "mails" : [
                                     {
-                                        "id" : 4532,
-                                        "user_name" : "aslam",
-                                        "ip" : "221.543.121.453",
+                                        "id" : 45232,
+                                        "user_name" : "asraf",
+                                        "date" : "12/12/2022",
+                                        "time" : "(03:12 PM)",
+                                        "ip" : "221.543.121.453 (Dhaka, Bangladesh)",
                                         "mail_sub" : "no idea what is happening",
+                                        "mail_body" : "I cannot see my profile information",
+                                        "mail": [
+                                            {
+                                                "user_name" : "asraf",
+                                                "mail_sub" : "no idea what is happening",
+                                                "mail_body" : "I cannot see my profile information",
+                                                "mail_status" : true
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id" : 44322,
+                                        "user_name" : "asraf",
+                                        "date" : "12/12/2022",
+                                        "time" : "(03:12 PM)",
+                                        "ip" : "221.543.121.453 (Dhaka, Bangladesh)",
+                                        "mail_sub" : "Feeds Selection Issue",
                                         "mail_body" : "i do not see log out button",
-                                        "mail_status" : true
-                                    },
-                                    {
-                                        "id" : 23432,
-                                        "user_name" : "aslam",
-                                        "ip" : "221.543.121.452",
-                                        "mail_sub" : "app internal issue",
-                                        "mail_body" : "how to send friend request to other users",
-                                        "mail_status" : true
-                                    },
-                                    {
-                                        "id" : 234,
-                                        "user_name" : "aslam",
-                                        "ip" : "221.543.121.452",
-                                        "mail_sub" : "app internal issues",
-                                        "mail_body" : "i cannot see campagin options",
-                                        "mail_status" : true
+                                        "mail": [
+                                            {
+                                                "user_name" : "asraf",
+                                                "mail_sub" : "Feeds Selection Issue",
+                                                "mail_body" : "i do not see log out button",
+                                                "mail_status" : true
+                                            }
+                                        ]
                                     }
+                                ]
+                            },
+                            {
+                                "id" : 23,
+                                "user_id" : "ja434",
+                                "mails" : [
+                                    {
+                                        "id" : 54235,
+                                        "user_name" : "jamil",
+                                        "date" : "12/12/2022",
+                                        "time" : "(03:12 PM)",
+                                        "ip" : "221.543.121.453 (Dhaka, Bangladesh)",
+                                        "mail_sub" : "43534534543 ",
+                                        "mail_body" : "i do not see friend lists",
+                                        "mail": [
+                                            {
+                                                "user_name" : "jamil",
+                                                "mail_sub" : "43534534543 ",
+                                                "mail_body" : "i do not see friend lists",
+                                                "mail_status" : true
+                                            }
+                                        ]
+                                    }
+
                                 ]
                             }
                         ]
